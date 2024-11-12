@@ -51,7 +51,7 @@ The frontend is built with **React.js**. To set up the frontend:
 
 1. Navigate to the `frontend` directory:
    ```bash
-   cd frontend
+   cd Frontend
    ```
 
 2. Install the required dependencies using **npm**:
@@ -61,10 +61,10 @@ The frontend is built with **React.js**. To set up the frontend:
 
 3. Start the React development server:
    ```bash
-   npm start
+   npm run dev
    ```
 
-   The frontend will now be running at **http://localhost:3000**. This will be your user interface where you can view, add, update, and delete users.
+   The frontend will now be running at **http://localhost:5173**. This will be your user interface where you can view, add, update, and delete users.
 
 ### 3. Backend Setup
 
@@ -82,7 +82,7 @@ The backend is built with **Node.js** and **Express.js**. To set up the backend:
 
 3. Start the backend server:
    ```bash
-   npm start
+   node src/server.js
    ```
 
    The backend will now be running at **http://localhost:5000**. This will handle the CRUD operations (Create, Read, Update, Delete) for users.
@@ -93,7 +93,7 @@ The backend is built with **Node.js** and **Express.js**. To set up the backend:
 
 After setting up both the frontend and backend as described above, you can open your web browser and do the following:
 
-1. Visit **http://localhost:3000** for the frontend interface.
+1. Visit **http://localhost:5173** for the frontend interface.
 2. The frontend will communicate with the backend at **http://localhost:5000** for user CRUD operations.
 
 ### Steps to Use:
