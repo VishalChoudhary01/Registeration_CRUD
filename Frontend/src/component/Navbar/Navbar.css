@@ -12,12 +12,12 @@ nav {
     z-index: 10; 
 }
 
-/* Logo Styles */
 nav .logo {
     font-family: "Noto Sans JP", sans-serif;
     font-size: 2rem; 
     color: #fff;
 }
+
 
 .logo span {
     font-family: "Doto", sans-serif;

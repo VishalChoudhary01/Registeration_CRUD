@@ -1,12 +1,14 @@
 import Banner from '/images/banner2.png'
-import React, { useState } from 'react';
+import  { useState } from 'react';
 import './Registeration.css'
+import { useNavigate } from 'react-router-dom';
+
 const Registeration = ({ onAdd }) => {
     const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [dob, setDob] = useState('');
   const [error, setError] = useState('');
-
+  const navigate = useNavigate();
   const handleSubmit = async (e) => {
     e.preventDefault();
     if (!name || !email || !dob) {
@@ -21,8 +23,10 @@ const Registeration = ({ onAdd }) => {
     setEmail('');
     setDob('');
     setError('');
+
+    navigate('/');
     } catch (err) {
-      setError('Failed to add user');
+      setError('Failed to add user',err);
     }
   };
 

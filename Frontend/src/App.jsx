@@ -6,12 +6,12 @@ import Registeration from './component/RegistrationForm/Registeration';
 import UpdateUser from './component/UpdateUser/UpdateUser';
 import UserList from './component/UserList/UsersList';
 import { getUsers, createUser, updateUser, deleteUser } from './../service/api.js';
-import Modal from './component/Modal/Modal';  // Import Modal
+import Modal from './component/Modal/Modal';  
 
 function App() {
-  const [users, setUsers] = useState([]); // State to store users
+  const [users, setUsers] = useState([]); 
   const [editingUser, setEditingUser] = useState(null);
-  const [modalOpen, setModalOpen] = useState(false); // State to control modal visibility
+  const [modalOpen, setModalOpen] = useState(false); 
 
   useEffect(() => {
     const fetchUsers = async () => {
@@ -55,7 +55,7 @@ function App() {
   const handleDeleteUser = async (id) => {
     try {
       await deleteUser(id);
-      setUsers(users.filter((user) => user.id !== id)); // Remove user from state
+      setUsers(users.filter((user) => user.id !== id)); 
     } catch (err) {
       console.error('Error deleting user:', err);
     }
