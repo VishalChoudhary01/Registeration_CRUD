@@ -5,7 +5,7 @@ const UserList = ({ users, onEdit, onDelete }) => {
     <div className="user-list">
       <h2>List of Registered User&apos;s</h2>
       {users.length === 0 ? (
-        <p>No users found.</p>
+        <p className='not-found-error'>No users found.</p>
       ) : (
         users.map((user) => (
           <UserItem

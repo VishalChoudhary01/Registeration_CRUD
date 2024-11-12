@@ -1,5 +1,6 @@
 import  { useState, useEffect } from 'react';
 import './UpdateUser.css'
+import { AiOutlineUser, AiOutlineMail, AiOutlineCalendar } from 'react-icons/ai';
 const UpdateUser = ({ user, onUpdate, onCancel }) => {
   const [name, setName] = useState(user.name);
   const [email, setEmail] = useState(user.email);
@@ -28,23 +29,36 @@ const UpdateUser = ({ user, onUpdate, onCancel }) => {
       <h2>Update User</h2>
       {error && <div className="error">{error}</div>}
       <form onSubmit={handleSubmit}>
+        <div className="input-container">
+        <AiOutlineUser className="input-icon" />
         <input
           type="text"
           value={name}
           onChange={(e) => setName(e.target.value)}
         />
-        <input
-          type="email"
-          value={email}
-          onChange={(e) => setEmail(e.target.value)}
-        />
-        <input
-          type="date"
-          value={dob}
-          onChange={(e) => setDob(e.target.value)}
-        />
-        <button  type="submit">Update User</button>
-        <button className='cancel-btn' type="button" onClick={onCancel}>Cancel</button>
+        </div>
+        
+        <div className="input-container">
+          <AiOutlineMail className="input-icon" />
+          <input
+            type="email"
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
+            placeholder="Email"
+          />
+        </div>
+        <div className="input-container">
+          <AiOutlineCalendar className="input-icon" />
+          <input
+            type="date"
+            value={dob}
+            onChange={(e) => setDob(e.target.value)}
+          />
+        </div>
+        <div className="modal-actions">
+          <button type="submit" className="update-btn">Update User</button>
+          <button className="cancel-btn" type="button" onClick={onCancel}>Cancel</button>
+        </div>
       </form>
     </div>
   );

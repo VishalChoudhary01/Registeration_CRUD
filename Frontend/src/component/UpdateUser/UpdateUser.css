@@ -15,78 +15,88 @@
     margin-bottom: 10px;
   }
   
-  .update-user-form input {
+  .update-user-form .input-container {
+    display: flex;
+    align-items: center;
     margin: 10px 0;
+  }
+  
+  .update-user-form .input-icon {
+    color: #4CAF50;
+    margin-right: 10px;
+  }
+  
+  .update-user-form input {
+    margin: 0;
     padding: 12px;
     font-size: 16px;
     border: 1px solid rgba(255, 255, 255, 0.3);
     border-radius: 8px;
     background: rgba(255, 255, 255, 0.1);
     color: white;
+    flex: 1;
     transition: border 0.3s ease;
   }
   
   .update-user-form input:focus {
-    border: 1px solid #4CAF50; 
+    border: 1px solid #56dc5b;
     outline: none;
   }
   
-  .update-user-form button[type='submit'] {
-    padding: 12px 20px;
-    background-color: #4CAF50; 
-    color: white;
-    border: none;
-    border-radius: 8px;
-    cursor: pointer;
-    margin-top: 20px;
-    transition: background-color 0.3s ease;
-  }
-  
-  .update-user-form button[type='submit']:hover {
-    background-color: #45a049; 
-  }
-  
-  /* Cancel Button Styling */
-  .cancel-btn {
-    padding: 12px 20px;
-    background-color: #f44336; 
-    color: white;
-    border: none;
-    border-radius: 8px;
-    cursor: pointer;
-    margin-top: 10px;
-    transition: background-color 0.3s ease;
-  }
-  
-  .cancel-btn:hover {
-    background-color: #e53935; 
-  }
-  
-  /* Modal Action Buttons (Cancel + Submit) */
-  .modal-actions {
+  .update-user-form .modal-actions {
     display: flex;
     justify-content: space-between;
     margin-top: 20px;
   }
   
-  .modal-actions button {
+  .update-user-form .modal-actions button {
     width: 48%;
+    font-weight: 600;
+    font-size: 1rem;
+    padding: 12px 20px;
+    color: white;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+
+
+
+  }
+  
+  .update-user-form .modal-actions button:active{
+    transform: scale(1.1);
+  }
+  .update-user-form button[type='submit']{
+    background-color: #4CAF50;
+  }
+  .update-user-form button[type='submit']:hover{
+    background-color: #03c509;
+  }
+  
+
+  .update-user-form .cancel-btn:hover {
+    background-color: #f20b0b;
+  }
+  
+  .update-user-form .cancel-btn {
+    background-color: #f44336;
   }
   
   @media (max-width: 768px) {
-    .modal-actions {
+    .update-user-form .modal-actions {
       flex-direction: column;
       align-items: center;
     }
   
-    .modal-actions button {
+    .update-user-form .modal-actions button {
       width: 100%;
       margin-top: 10px;
     }
   }
   
   @media (max-width: 480px) {
-    .modal-actions button {
+    .update-user-form .modal-actions button {
       width: 100%;
       margin-top: 10px;
     }

@@ -19,7 +19,6 @@
 .registeration h2{
     font-size: 2rem;
     text-transform: uppercase;
-    /* filter: drop-shadow(2px 2px  20px #001c13); */
     text-shadow: 4px 5px 4px #c3f7cf,0 0 1px #222;
 
 }

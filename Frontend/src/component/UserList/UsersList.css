@@ -1,42 +1,63 @@
+/* Main container for the user list */
 .user-list {
     width: 80%;
     margin: 0 auto;
     padding: 20px;
   }
   
+  /* Header styles */
   h2 {
     text-align: center;
+    text-shadow: 2px 3px 5px #fff, 0 0 2px #222;
+    text-transform: uppercase;
+    word-spacing: 5px;
+    font-size: 2rem; /* Default size for larger screens */
   }
   
-  .user-item {
-    display: flex;
-    justify-content: space-between;
-    background-color: #f9f9f9;
-    padding: 15px;
-    margin: 10px 0;
-    border-radius: 8px;
-    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
+  /* "No users found" message */
+  .not-found-error {
+    text-align: center;
+    font-style: oblique;
+    font-weight: 800;
+    color: rgba(7, 170, 170, 0.51);
+    text-shadow: 1px 1px 5px #fff, 1px 1px #222, 0 0 10px #fff, 0 0 15px #fff;
+    font-size: 1.2rem;
+    margin-top: 20px;
   }
   
-  .user-info {
-    flex: 1;
+  /* Media Queries */
+  
+  /* For tablet devices (max-width: 768px) */
+  @media (max-width: 768px) {
+    .user-list {
+      width: 90%;
+    }
+  
+    h2 {
+      font-size: 1.5rem; /* Adjust heading size for tablets */
+      word-spacing: 3px;
+    }
+  
+    .not-found-error {
+      font-size: 1rem;  /* Adjust error message font size */
+      margin-top: 15px;
+    }
   }
   
-  .user-actions {
-    display: flex;
-    gap: 10px;
-  }
+  /* For mobile devices (max-width: 480px) */
+  @media (max-width: 480px) {
+    .user-list {
+      width: 95%;
+    }
   
-  button {
-    padding: 8px 16px;
-    background-color: #007BFF;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-  }
+    h2 {
+      font-size: 1.2rem;  /* Adjust font size for mobile */
+      word-spacing: 2px;
+    }
   
-  button:hover {
-    background-color: #0056b3;
+    .not-found-error {
+      font-size: 1rem; /* Adjust error message font size for mobile */
+      margin-top: 20px;
+    }
   }
   

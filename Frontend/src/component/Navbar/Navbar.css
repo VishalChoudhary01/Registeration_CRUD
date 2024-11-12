@@ -55,7 +55,6 @@ nav div {
     }
 
     nav div {
-        flex-direction: column; 
         gap: 5px; 
     }
 

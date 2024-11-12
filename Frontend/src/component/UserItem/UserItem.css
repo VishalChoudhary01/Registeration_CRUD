@@ -1,28 +1,117 @@
 .user-item {
     display: flex;
     justify-content: space-between;
-    align-items: center;
-    background-color: #f9f9f9;
+    background: #01180b72;
+    backdrop-filter: blur(10px);
+    color: #fff;
     padding: 15px;
     margin: 10px 0;
     border-radius: 8px;
     box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
+    flex-wrap: wrap;
+  }
+  
+  .user-info {
+    flex: 1;
+  }
+  
+  .user-info h3,
+  .user-info p {
+    margin: 5px 0;
+    font-size: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 10px;
   }
   
   .user-info h3 {
-    margin: 0;
+    font-size: 1.1rem;
+    font-weight: bold;
+  }
+  
+  .user-info p {
+    font-size: 0.95rem;
+  }
+  
+  .user-actions {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
   }
   
   .user-actions button {
-    padding: 8px 16px;
-    background-color: #007BFF;
-    color: white;
-    border: none;
-    border-radius: 5px;
+    width: 7.8rem;
+    font-size: 1rem;
+    text-transform: uppercase;
+    height: 2.6rem;
+    transition: all ease-in 0.3s;
     cursor: pointer;
+    color: #fff;
+    border-radius: 10px;
   }
   
-  .user-actions button:hover {
-    background-color: #0056b3;
+  .user-actions button svg {
+    font-size: 0.9rem;
+  }
+  
+  .user-actions button:active {
+    transform: scale(1.1);
+  }
+  
+  .user-actions button:first-child {
+    background: #0216c9;
+  }
+  
+  .user-actions button:last-child {
+    background: #bb0202;
+  }
+  
+  .user-actions button:first-child:hover {
+    background: #2137f6;
+  }
+  
+  .user-actions button:last-child:hover {
+    background: #f50606;
+  }
+  
+  /* Tablet (max-width: 768px) */
+  @media (max-width: 768px) {
+    .user-item {
+      padding: 12px;
+      gap: 10px;
+    }
+  
+    .user-actions {
+      width: 100%;
+      justify-content: space-between;
+    }
+  
+    .user-actions button {
+      width: 48%;
+      font-size: 0.9rem; /* Adjusted font size */
+      height: 2.3rem; /* Adjusted button height */
+    }
+  }
+  
+  /* Mobile (max-width: 480px) */
+  @media (max-width: 480px) {
+    .user-item {
+      flex-direction: column;
+      padding: 8px;
+      gap: 10px;
+    }
+  
+    .user-actions {
+      width: 100%;
+      justify-content: center;
+    }
+  
+    .user-actions button {
+      width: 100%;
+      font-size: 0.8rem; /* Adjusted font size for mobile */
+      height: 2rem; /* Adjusted button height for mobile */
+    }
   }
   
