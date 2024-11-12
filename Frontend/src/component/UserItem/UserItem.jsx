@@ -1,4 +1,3 @@
-import React from 'react';
 import { FaEdit, FaTrashAlt, FaUser, FaEnvelope, FaCalendarAlt } from 'react-icons/fa'; // Import the necessary icons
 
 import './UserItem.css';

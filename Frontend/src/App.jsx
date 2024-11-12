@@ -17,38 +17,35 @@ function App() {
     const fetchUsers = async () => {
       try {
         const response = await getUsers();
-        setUsers(response.data); // Set the users in state
+        setUsers(response.data); 
       } catch (err) {
         console.error('Error fetching users:', err);
       }
     };
 
     fetchUsers();
-  }, []); // Empty array ensures it runs only once, like componentDidMount
+  }, []); 
 
-  // Add a new user to the list
   const handleAddUser = async (newUser) => {
     try {
       const response = await createUser(newUser);
-      setUsers([...users, response.data]); // Add new user to the list
+      setUsers([...users, response.data]); 
     } catch (err) {
       console.error('Error adding user:', err);
     }
   };
 
-  // Edit an existing user's information
   const handleEditUser = (user) => {
-    setEditingUser(user);  // Set the user to be edited
-    setModalOpen(true);     // Open the modal
+    setEditingUser(user);  
+    setModalOpen(true);     
   };
 
-  // Update the user information in the list
   const handleUpdateUser = async (updatedUser) => {
     try {
       const response = await updateUser(updatedUser.id, updatedUser);
       setUsers(users.map((user) => (user.id === updatedUser.id ? response.data : user))); // Update user in state
-      setModalOpen(false);  // Close modal after updating
-      setEditingUser(null);  // Clear editing mode
+      setModalOpen(false);  
+      setEditingUser(null);  
     } catch (err) {
       console.error('Error updating user:', err);
     }
@@ -79,7 +76,6 @@ function App() {
           />
         </Routes>
 
-        {/* Modal to update user */}
         <Modal isOpen={modalOpen} onClose={() => setModalOpen(false)}>
           <UpdateUser
             user={editingUser}

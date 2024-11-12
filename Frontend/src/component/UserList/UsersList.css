@@ -1,20 +1,17 @@
-/* Main container for the user list */
 .user-list {
     width: 80%;
     margin: 0 auto;
     padding: 20px;
   }
   
-  /* Header styles */
   h2 {
     text-align: center;
     text-shadow: 2px 3px 5px #fff, 0 0 2px #222;
     text-transform: uppercase;
     word-spacing: 5px;
-    font-size: 2rem; /* Default size for larger screens */
+    font-size: 2rem; 
   }
   
-  /* "No users found" message */
   .not-found-error {
     text-align: center;
     font-style: oblique;
@@ -27,36 +24,34 @@
   
   /* Media Queries */
   
-  /* For tablet devices (max-width: 768px) */
   @media (max-width: 768px) {
     .user-list {
       width: 90%;
     }
   
     h2 {
-      font-size: 1.5rem; /* Adjust heading size for tablets */
+      font-size: 1.5rem; 
       word-spacing: 3px;
     }
   
     .not-found-error {
-      font-size: 1rem;  /* Adjust error message font size */
+      font-size: 1rem;  
       margin-top: 15px;
     }
   }
   
-  /* For mobile devices (max-width: 480px) */
   @media (max-width: 480px) {
     .user-list {
       width: 95%;
     }
   
     h2 {
-      font-size: 1.2rem;  /* Adjust font size for mobile */
+      font-size: 1.2rem;  
       word-spacing: 2px;
     }
   
     .not-found-error {
-      font-size: 1rem; /* Adjust error message font size for mobile */
+      font-size: 1rem; 
       margin-top: 20px;
     }
   }

@@ -134,7 +134,6 @@ padding-top: 0.5rem;
     font-size: 1.1rem;
     text-shadow: 1px 1px 10px #fff;
 }
-/* Responsive Styles */
 @media (max-width: 768px) {
     .registeration {
         width: 90%;
